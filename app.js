@@ -1,5 +1,5 @@
 const http = require('http');
-const dayjs = require('dayjs'); // added for activity 5
+const dayjs = require('dayjs');
 const {
     getAllStudents,
     getStudentById,
@@ -19,7 +19,7 @@ function createServer() {
 <body>
   <h1>Student Profile System</h1>
   <p>Total: ${students.length} · Average age: ${avgAge.toFixed(1)} · Grade A: ${gradeDistribution['A'] || 0}</p>
-  <p>Server time: ${dayjs().format('YYYY-MM-DD HH:mm:ss')}</p>  // added for activity 5
+  <p>Server time: ${dayjs().format('YYYY-MM-DD HH:mm:ss')}</p>
   <table>
     ${students.map(s => `<tr><td>${s.id}</td><td>${s.name}</td><td>${s.grade}</td><td>${s.email}</td></tr>`).join('')}
   </table>
